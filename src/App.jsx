@@ -2,7 +2,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Main from "./components/Main";
-import Projects from "./components/ProjectsDisplay";
+import Work from "./components/Work";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -10,7 +10,7 @@ function App() {
     <>
       <Navbar></Navbar>
       <Main></Main>
-      <Projects></Projects>
+      <Work></Work>
     </>
   );
 }
