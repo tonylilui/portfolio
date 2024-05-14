@@ -1,51 +1,87 @@
-import React from "react";
-
+import React, { useState } from "react";
+import {
+  AiOutlineMenu,
+  AiOutlineHome,
+  AiOutlineProject,
+  AiOutlineMail,
+} from "react-icons/ai";
+import { BsPerson } from "react-icons/bs";
+import { GrProjects } from "react-icons/gr";
 const Navbar = () => {
+  const [nav, setNav] = useState(false);
+  const handleNav = () => {
+    setNav(!nav);
+    console.log("state changed");
+  };
   return (
-    <nav className="bg-gray-800 p-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <a href="#" className="text-white text-lg font-bold">
-              Tony Li
-            </a>
-          </div>
-          <div className="hidden md:flex items-center">
-            <a href="#" className="text-gray-300 hover:text-white px-3 py-2">
-              Home
-            </a>
-            <a href="#" className="text-gray-300 hover:text-white px-3 py-2">
-              About
-            </a>
-            <a href="#" className="text-gray-300 hover:text-white px-3 py-2">
-              Services
-            </a>
-            <a href="#" className="text-gray-300 hover:text-white px-3 py-2">
-              Contact
-            </a>
-          </div>
-          {/* Mobile menu */}
-          <div className="md:hidden">
-            <button className="text-white">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
-            </button>
-          </div>
+    <div>
+      <AiOutlineMenu
+        onClick={handleNav}
+        className="absolute top-4 right-4 z-[99]"
+      />
+      {nav ? (
+        <div className="fixed w-full h-screen bg-white/90 flex flex-col justify-center items-center z-20">
+          <a
+            href="#main"
+            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+          >
+            <AiOutlineHome size={20} />
+            <span className="pl-4">Home</span>
+          </a>
+          <a
+            href="#main"
+            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+          >
+            <GrProjects size={20} />
+            <span className="pl-4">Projects</span>
+          </a>
+          <a
+            href="#main"
+            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+          >
+            <BsPerson size={20} />
+            <span className="pl-4">Resume</span>
+          </a>
+          <a
+            href="#main"
+            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+          >
+            <AiOutlineMail size={20} />
+            <span className="pl-4">Contact</span>
+          </a>
+        </div>
+      ) : (
+        ""
+      )}
+      <div className="md:block hidden fixed top-[25%] z-10">
+        <div className="flex flex-col">
+          <a
+            href="#main"
+            className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+          >
+            <AiOutlineHome size={20} />
+          </a>
+          <a
+            href="#projects"
+            className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+          >
+            <GrProjects size={20} />
+          </a>
+          <a
+            href="#resume"
+            className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+          >
+            <BsPerson size={20} />
+          </a>
+          <a
+            href="#contact"
+            className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+          >
+            <AiOutlineMail size={20} />
+          </a>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 
