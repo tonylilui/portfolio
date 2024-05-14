@@ -32,9 +32,15 @@ const Main = () => {
             />
           </h2>
           <div className="flex justify-between pt-6 max-w-[200px] w-full">
-            <FaLinkedinIn className="cursor-pointer"></FaLinkedinIn>
-            <FaGithub className="cursor-pointer"></FaGithub>
-            <FaInstagram className="cursor-pointer"></FaInstagram>
+            <a href="https://www.linkedin.com/in/tonylilui">
+              <FaLinkedinIn className="cursor-pointer hover:scale-110 size-5"></FaLinkedinIn>
+            </a>
+            <a href="https://github.com/tonylilui">
+              <FaGithub className="cursor-pointer hover:scale-110 size-5"></FaGithub>
+            </a>
+            <a href="https://www.instagram.com/tonystackofficial/">
+              <FaInstagram className="cursor-pointer hover:scale-110 size-5"></FaInstagram>
+            </a>
           </div>
         </div>
       </div>
