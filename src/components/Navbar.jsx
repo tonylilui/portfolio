@@ -17,7 +17,7 @@ const Navbar = () => {
     <div>
       <AiOutlineMenu
         onClick={handleNav}
-        className="absolute top-4 right-4 z-[99] hover:scale-110"
+        className="absolute top-4 right-4 z-[99] scale-120 hover:scale-125"
       />
       {nav ? (
         <div className="fixed w-full h-screen bg-white/90 flex flex-col justify-center items-center z-20">
@@ -39,7 +39,7 @@ const Navbar = () => {
           </a>
           <a
             onClick={handleNav}
-            href="#main"
+            href="src/assets/ResumeTonyLi.pdf"
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <BsPerson size={20} />
@@ -47,7 +47,7 @@ const Navbar = () => {
           </a>
           <a
             onClick={handleNav}
-            href="#main"
+            href="mailto:tony.lilui@live.com"
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineMail size={20} />
@@ -72,13 +72,13 @@ const Navbar = () => {
             <GrProjects size={20} />
           </a>
           <a
-            href="#resume"
+            href="src/assets/ResumeTonyLi.pdf"
             className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
           >
             <BsPerson size={20} />
           </a>
           <a
-            href="#contact"
+            href="mailto:tony.lilui@live.com"
             className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
           >
             <AiOutlineMail size={20} />
