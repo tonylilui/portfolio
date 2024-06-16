@@ -15,9 +15,11 @@ const Projects = () => {
       <div className="grid sm:grid-cols-2 gap-12">
         <ProjectItem
           img={One}
-          title="first app"
-          description={"description"}
-          projectURL={"/"}
+          title="StuStack"
+          description={
+            "Created an automated newsletter catered to post secondary students advertising opportunities and events"
+          }
+          projectURL={"https://stustack.vercel.app/"}
         ></ProjectItem>
         <ProjectItem
           img={Two}
