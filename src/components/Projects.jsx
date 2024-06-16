@@ -16,9 +16,7 @@ const Projects = () => {
         <ProjectItem
           img={One}
           title="StuStack"
-          description={
-            "Created an automated newsletter catered to post secondary students advertising opportunities and events"
-          }
+          description={"The Ultimate Student Newsletter."}
           projectURL={"https://stustack.vercel.app/"}
         ></ProjectItem>
         <ProjectItem
